@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모두의곤충 - 찾아가는 곤충교육 전문기관 | 서울 유치원 초등학교 출장교육</title>
+    <meta name="description" content="전국 학교와 기관으로 찾아가는 체험형 곤충교육 전문기관 모두의곤충. 유치원, 초중고 맞춤 교육프로그램, 곤충전시, 전문강사 교육 서비스 제공.">
+    <meta name="keywords" content="곤충교육, 출장교육, 곤충체험, 유치원교육, 초등학교교육, 곤충전시, 서울곤충교육, 모두의곤충">
+    <meta name="author" content="모두의곤충">
+    <meta property="og:title" content="모두의곤충 - 찾아가는 곤충교육 전문기관">
+    <meta property="og:description" content="전국 학교와 기관으로 찾아가는 체험형 곤충교육 전문기관">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoursite.com">
+    <meta name="robots" content="index, follow">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #4CAF50, #8BC34A);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo::before {
+            content: "🦋";
+            margin-right: 10px;
+            font-size: 2rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-menu a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(76, 175, 80, 0.8), rgba(139, 195, 74, 0.8)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23E8F5E8" width="1200" height="400"/><g fill="%234CAF50" opacity="0.1"><circle cx="100" cy="100" r="20"/><circle cx="300" cy="150" r="15"/><circle cx="500" cy="80" r="25"/><circle cx="700" cy="180" r="18"/><circle cx="900" cy="120" r="22"/><circle cx="1100" cy="160" r="16"/></g></svg>');
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            background-size: cover;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #FF9800;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #F57C00;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2E7D32;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: #2E7D32;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Programs Section */
+        .programs {
+            padding: 80px 0;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .program-card {
+            background: linear-gradient(135deg, #E8F5E8, #C8E6C9);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #4CAF50;
+        }
+
+        .program-card h3 {
+            color: #2E7D32;
+            margin-bottom: 1rem;
+        }
+
+        .program-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .program-card li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .program-card li::before {
+            content: "🐛";
+            position: absolute;
+            left: 0;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            background: #E8F5E8;
+            height: 200px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .contact-form {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.9);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #FF9800;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #F57C00;
+            transform: translateY(-2px);
+        }
+
+        .contact-info h3 {
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-info .highlight {
+            background: rgba(255,255,255,0.2);
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #1B5E20;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .social-links a:hover {
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">모두의곤충</div>
+            <ul class="nav-menu">
+                <li><a href="#home">홈</a></li>
+                <li><a href="#services">서비스</a></li>
+                <li><a href="#programs">프로그램</a></li>
+                <li><a href="#gallery">갤러리</a></li>
+                <li><a href="#contact">문의</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>🦋 살아있는 곤충과 함께하는 특별한 교육 🐛</h1>
+            <p>전국 학교와 기관으로 찾아가는 체험형 곤충교육 전문기관입니다</p>
+            <a href="tel:010-1234-5678" class="cta-button">📞 바로 전화하기</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">주요 서비스</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏫</div>
+                    <h3>찾아가는 출장교육</h3>
+                    <p>유치원, 초중고등학교, 도서관, 문화센터 등 어디든 찾아가서 생생한 곤충교육을 진행합니다. 아이들이 직접 만지고 관찰할 수 있는 체험형 교육프로그램입니다.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🦋</div>
+                    <h3>곤충전시 서비스</h3>
+                    <p>다양한 살아있는 곤충들을 전시하여 아이들의 호기심을 자극하고 자연에 대한 관심을 높입니다. 안전하고 교육적인 전시로 구성됩니다.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👨‍🏫</div>
+                    <h3>전문강사 교육</h3>
+                    <div style="font-weight: bold; color: #4CAF50; margin-bottom: 10px;">✓ 곤충학 전공 전문강사진</div>
+                    <div style="font-weight: bold; color: #4CAF50; margin-bottom: 10px;">✓ 아동교육 경험 풍부</div>
+                    <div style="font-weight: bold; color: #4CAF50;">✓ 안전교육 이수완료</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="programs">
+        <div class="container">
+            <h2 class="section-title">교육 프로그램</h2>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <h3>🌱 유치원 프로그램 (5-7세)</h3>
+                    <ul>
+                        <li>곤충친구들과 인사하기</li>
+                        <li>곤충의 생김새 관찰하기</li>
+                        <li>나비 생활사 알아보기</li>
+                        <li>곤충 흉내내기 놀이</li>
+                        <li>소요시간: 40-50분</li>
+                    </ul>
+                </div>
+                <div class="program-card">
+                    <h3>📚 초등 저학년 (8-10세)</h3>
+                    <ul>
+                        <li>곤충의 특징과 분류</li>
+                        <li>곤충의 한살이 학습</li>
+                        <li>곤충 관찰 및 스케치</li>
+                        <li>생태계에서의 곤충 역할</li>
+                        <li>소요시간: 50-60분</li>
+                    </ul>
+                </div>
+                <div class="program-card">
+                    <h3>🔬 초등 고학년 (11-13세)</h3>
+                    <ul>
+                        <li>곤충의 구조와 기능</li>
+                        <li>곤충의 적응과 진화</li>
+                        <li>현미경으로 관찰하기</li>
+                        <li>곤충과 환경보호</li>
+                        <li>소요시간: 60-70분</li>
+                    </ul>
+                </div>
+                <div class="program-card">
+                    <h3>🏛️ 기관 맞춤 프로그램</h3>
+                    <ul>
+                        <li>도서관 특별강연</li>
+                        <li>문화센터 체험교실</li>
+                        <li>캠프 특별활동</li>
+                        <li>축제 및 행사 전시</li>
+                        <li>소요시간: 협의 가능</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">교육 현장 갤러리</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">🦋<br><small>나비 관찰 수업</small></div>
+                <div class="gallery-item">🐛<br><small>애벌레 체험</small></div>
+                <div class="gallery-item">🔍<br><small>현미경 관찰</small></div>
+                <div class="gallery-item">👥<br><small>단체 교육</small></div>
+                <div class="gallery-item">📝<br><small>관찰 기록</small></div>
+                <div class="gallery-item">🎭<br><small>역할놀이</small></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">교육 예약 및 문의</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <h3>🔥 바로 연락하기</h3>
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <a href="tel:010-1234-5678" class="cta-button" style="display: inline-block; margin: 1rem; font-size: 1.2rem;">
+                            📞 전화 걸기<br><small style="font-size: 0.9rem;">010-1234-5678</small>
+                        </a>
+                        <a href="sms:010-1234-5678?body=안녕하세요! 모두의곤충 교육 문의드립니다.%0A%0A기관명:%0A담당자명:%0A연락처:%0A희망일정:%0A참여인원:%0A문의내용:" class="cta-button" style="display: inline-block; margin: 1rem; font-size: 1.2rem; background: #4CAF50;">
+                            💬 문자 보내기<br><small style="font-size: 0.9rem;">템플릿 자동 입력</small>
+                        </a>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; margin-top: 2rem;">
+                        <h4 style="margin-bottom: 1rem; color: #FFE082;">💡 예약 시 필요정보</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.3rem 0;">✓ 기관명 (학교/어린이집 등)</li>
+                            <li style="padding: 0.3rem 0;">✓ 담당자명 및 연락처</li>
+                            <li style="padding: 0.3rem 0;">✓ 희망 교육일정</li>
+                            <li style="padding: 0.3rem 0;">✓ 참여 아동 연령대</li>
+                            <li style="padding: 0.3rem 0;">✓ 참여 인원수</li>
+                            <li style="padding: 0.3rem 0;">✓ 교육 장소 정보</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: rgba(255,193,7,0.2); padding: 1.5rem; border-radius: 10px; margin-top: 1rem; border-left: 4px solid #FFC107;">
+                        <h4 style="margin-bottom: 1rem; color: #FFE082;">⏰ 운영시간</h4>
+                        <p style="margin: 0.5rem 0;">평일: 오전 9시 ~ 오후 6시</p>
+                        <p style="margin: 0.5rem 0;">토요일: 오전 9시 ~ 오후 2시</p>
+                        <p style="margin: 0.5rem 0; color: #FFB74D;">일요일/공휴일: 휴무</p>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <h3>📞 연락처 정보</h3>
+                    <div class="highlight">
+                        <p><strong>📧 이메일:</strong> info@modooinsect.co.kr</p>
+                        <p><strong>☎️ 전화:</strong> <a href="tel:010-1234-5678" style="color: white; text-decoration: underline;">010-1234-5678</a></p>
+                        <p><strong>📱 카카오톡:</strong> @모두의곤충</p>
+                        <p><strong>📝 블로그:</strong> <a href="#" style="color: white; text-decoration: underline;">네이버 블로그</a></p>
+                    </div>
+                    
+                    <h3 style="margin-top: 2rem;">🚗 서비스 지역</h3>
+                    <p>• 서울, 경기, 인천 전 지역</p>
+                    <p>• 충청권, 강원권 (사전 협의)</p>
+                    <p>• 전국 출장 가능 (별도 협의)</p>
+                    
+                    <h3 style="margin-top: 2rem;">💰 교육비 안내</h3>
+                    <div class="highlight">
+                        <p>• 1회 교육비: 15만원~25만원</p>
+                        <p>• 출장비: 지역별 차등 적용</p>
+                        <p>• 30명 이상 단체 할인</p>
+                        <p>• 연간 계약시 특별 할인</p>
+                    </div>
+
+                    <h3 style="margin-top: 2rem;">🏢 회사 정보</h3>
+                    <div class="highlight">
+                        <p>• 상호: 모두의곤충</p>
+                        <p>• 대표: 전영식</p>
+                        <p>• 사업자번호: 524-14-00269</p>
+                        <p>• 주소: 서울 영등포구 선유로13길25 5층 510-1호</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <p>&copy; 2024 모두의곤충. All rights reserved.</p>
+                    <p>사업자등록번호: 524-14-00269 | 대표: 전영식 | 전화: 010-1234-5678</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">서울 영등포구 선유로13길25 5층 510-1호</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" title="네이버 블로그">📝</a>
+                    <a href="#" title="카카오톡">💬</a>
+                    <a href="#" title="유튜브">📺</a>
+                    <a href="#" title="인스타그램">📷</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Remove form submission handler since we're using direct contact methods
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Simple animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.service-card, .program-card, .gallery-item');
+            const windowHeight = window.innerHeight;
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('animate-on-scroll');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+
+        // Gallery item click handler
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const content = this.textContent;
+                alert(`${content}\n\n실제 교육 현장 사진을 보시려면 문의해주세요! 📸`);
+            });
+        });
+
+        // Set minimum date to today - removed since we don't have date input anymore
+        
+        // Add click tracking for contact buttons
+        document.querySelectorAll('a[href^="tel:"], a[href^="sms:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                console.log('Contact method used:', this.href);
+            });
+        });
+    </script>
+</body>
+</html>
